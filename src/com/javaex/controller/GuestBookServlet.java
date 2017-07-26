@@ -53,7 +53,6 @@ public class GuestBookServlet extends HttpServlet {
 		} else if("delete".equals(action)) {
 			System.out.println("delete");
 			
-			request.setCharacterEncoding("UTF-8");
 			String no = request.getParameter("no");
 			String pw = request.getParameter("password");
 			
