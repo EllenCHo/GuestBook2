@@ -28,6 +28,7 @@ public class GuestBookServlet extends HttpServlet {
 		if("add".equals(action)) {
 			System.out.println("add");
 			
+			request.setCharacterEncoding("UTF-8");
 			String name = request.getParameter("name");
 			String pw = request.getParameter("password");
 			String content = request.getParameter("content");
@@ -52,6 +53,7 @@ public class GuestBookServlet extends HttpServlet {
 		} else if("delete".equals(action)) {
 			System.out.println("delete");
 			
+			request.setCharacterEncoding("UTF-8");
 			String no = request.getParameter("no");
 			String pw = request.getParameter("password");
 			
