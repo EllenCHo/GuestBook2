@@ -36,6 +36,13 @@ public class GuestBookServlet extends HttpServlet {
 		} else if("delete".equals(action)) {
 			System.out.println("delete");
 			
+			String no = request.getParameter("no");
+			String pw = request.getParameter("password");
+			
+			GuestBookDao dao = new GuestBookDao();
+			dao.delete(no, pw);	
+			
+			response.sendRedirect("/g2/gb");
 		} else {
 			//리스트
 			GuestBookDao dao = new GuestBookDao();

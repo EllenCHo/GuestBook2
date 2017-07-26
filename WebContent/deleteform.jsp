@@ -11,7 +11,7 @@
 </head>
 <body>
 	<form method="post" action="/g2/gb">
-	<input type='hidden' name="id" value=<%=no %>>
+	<input type='hidden' name="no" value=<%=no %>>
 	<input type="hidden" name="a" value ="delete">
 	<table>
 		<tr>
