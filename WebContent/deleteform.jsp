@@ -10,14 +10,15 @@
 <title>방명록</title>
 </head>
 <body>
-	<form method="post" action="delete.jsp">
+	<form method="post" action="/g2/gb">
 	<input type='hidden' name="id" value=<%=no %>>
+	<input type="hidden" name="a" value ="delete">
 	<table>
 		<tr>
 			<td>비밀번호</td>
 			<td><input type="password" name="password"></td>
 			<td><input type="submit" value="확인"></td>
-			<td><a href="list.jsp">메인으로 돌아가기</a></td>
+			<td><a href="/g2/gb">메인으로 돌아가기</a></td>
 		</tr>
 	</table>
 	</form>

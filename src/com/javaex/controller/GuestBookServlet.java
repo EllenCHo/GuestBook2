@@ -34,6 +34,7 @@ public class GuestBookServlet extends HttpServlet {
 			rd.forward(request, response);
 			
 		} else if("delete".equals(action)) {
+			System.out.println("delete");
 			
 		} else {
 			//리스트
