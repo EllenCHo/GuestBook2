@@ -27,6 +27,12 @@ public class GuestBookServlet extends HttpServlet {
 			System.out.println("add");
 		} else if("deleteform".equals(action)) {
 			System.out.println("deleteform");
+			
+			String no = request.getParameter("no");
+			request.setAttribute("no", no);
+			RequestDispatcher rd = request.getRequestDispatcher("deleteform.jsp");
+			rd.forward(request, response);
+			
 		} else if("delete".equals(action)) {
 			
 		} else {

@@ -34,7 +34,7 @@
 			<td>[<%=vo.getNo()%>]</td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getDate() %></td>
-			<td><a href="/g2/gb?id=<%=vo.getNo()%>&a=deleteform">삭제</a></td>
+			<td><a href="/g2/gb?a=deleteform&no=<%=vo.getNo()%>">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan=4><%=vo.getContent().replace("\n", "<br/>") %></td>
