@@ -10,12 +10,6 @@ public class GuestBookVo {
 	public GuestBookVo() {
 	}
 
-	public GuestBookVo(String name, String pw, String content) {
-		this.name = name;
-		this.pw = pw;
-		this.content = content;
-	}
-
 	public GuestBookVo(String name, String pw, String content, String date) {
 		this.name = name;
 		this.pw = pw;

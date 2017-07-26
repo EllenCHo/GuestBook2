@@ -1,6 +1,8 @@
 package com.javaex.controller;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -25,6 +27,20 @@ public class GuestBookServlet extends HttpServlet {
 		
 		if("add".equals(action)) {
 			System.out.println("add");
+			
+			String name = request.getParameter("name");
+			String pw = request.getParameter("password");
+			String content = request.getParameter("content");
+			
+			Calendar cal = Calendar.getInstance();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			String date = sdf.format(cal.getTime());
+			
+			GuestBookDao dao = new GuestBookDao();
+			dao.insert(new GuestBookVo(name, pw, content, date));
+			
+			response.sendRedirect("/g2/gb");
+			
 		} else if("deleteform".equals(action)) {
 			System.out.println("deleteform");
 			
