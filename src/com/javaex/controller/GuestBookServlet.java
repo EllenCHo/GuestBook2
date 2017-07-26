@@ -23,12 +23,12 @@ public class GuestBookServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");		//인코딩 방식은 맨처음부터 해줘야함
 		String action = request.getParameter("a");
 		
 		if("add".equals(action)) {
 			System.out.println("add");
 			
-			request.setCharacterEncoding("UTF-8");
 			String name = request.getParameter("name");
 			String pw = request.getParameter("password");
 			String content = request.getParameter("content");
