@@ -12,7 +12,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="add.jsp" method="post">
+	<form action="/g2/gb?a=add" method="post">
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
@@ -34,7 +34,7 @@
 			<td>[<%=vo.getNo()%>]</td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getDate() %></td>
-			<td><a href="deleteform.jsp?id=<%=vo.getNo()%>">삭제</a></td>
+			<td><a href="/g2/gb?id=<%=vo.getNo()%>&a=deleteform">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan=4><%=vo.getContent().replace("\n", "<br/>") %></td>

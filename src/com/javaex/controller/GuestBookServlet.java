@@ -17,16 +17,16 @@ import com.javaex.vo.GuestBookVo;
  * Servlet implementation class GeustBookServlet
  */
 @WebServlet("/gb")
-public class GeustBookServlet extends HttpServlet {
+public class GuestBookServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("a");
 		
 		if("add".equals(action)) {
-			
+			System.out.println("add");
 		} else if("deleteform".equals(action)) {
-			
+			System.out.println("deleteform");
 		} else if("delete".equals(action)) {
 			
 		} else {
